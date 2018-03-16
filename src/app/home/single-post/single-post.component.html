@@ -1,0 +1,21 @@
+<div class="container col-sm-3 loader" *ngIf="loader">
+    <img id="loader" src="./assets/Rolling-1s-200px.gif">
+</div>
+<div class="postContent" *ngIf="!loader">
+    <div class="container-fluid col-md-9" id="single-post" *ngIf="postData.id">
+        <div *ngIf='!editTitle'>
+            <h1>{{ postData.title.rendered }}</h1>
+        </div>
+        <div *ngIf='editTitle'>
+            <input #titleInput id="title" type="text" (keyup)="onNameKeyUp($event)" placeholder='{{postData.title.rendered}}' value=''>
+            <button id="submitTitleButton" type="submit" (click)="submitTitle(postData)" class="btn btn-primary">Submit Title</button>
+        </div>
+        <div *ngIf="showEdit">
+            <button id="editTitleButton" class="btn btn-primary" (click)="editPost(postData)">Edit Title</button>
+        </div>
+        <section [innerHTML]="postData.content.rendered">{{ postData.content.rendered }}</section>
+        <h4><strong id="author">Author: </strong><span id="authorName">{{ postData._embedded.author[0].name }}</span> | <strong id="postedOn">posted on: </strong> {{ postData.date | date }}</h4>
+    </div>
+</div>
+
+    

@@ -1,0 +1,47 @@
+
+
+.post-list {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    opacity: 0.9;
+    background-color:#edf2f9;
+    box-shadow: 1px 0 6px 1px;
+    border: 2px solid white;
+}
+
+li {
+    margin-bottom: 6px;
+    
+}
+
+.card-header {
+    background-color: grey;
+}
+
+.card:hover {
+    border: 2px solid white;
+    background-color: #b7d2fc;
+    animation: pulsate 1s infinite alternate-reverse;
+    -webkit-animation: pulsate 1s infinite alternate-reverse;
+    /* -moz-animation: pulsate 1s infinite alternate; */
+}
+
+.card-text {
+    padding: 10px;
+}
+
+@-webkit-keyframes pulsate {
+    from { border: 2px solid white; }
+    to { border: 2px solid #289aff; }
+
+}
+
+@keyframes pulsate {
+    from { border: 2px solid white }
+    to { border: 2px solid #289aff; }
+}

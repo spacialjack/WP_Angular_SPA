@@ -1,0 +1,32 @@
+#loginUserName {
+    animation: pulsate 1s steps(20) infinite alternate;
+    -webkit-animation: pulsate 1s steps(20) infinite alternate;
+    cursor: auto;
+    border: 2px solid black;
+}
+
+#loginPassword {
+    animation: pulsate 1s steps(20) infinite alternate;
+    -webkit-animation: pulsate 1s steps(20) infinite alternate;
+    cursor: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid black;
+}
+
+#loginButton {
+    animation: pulsate 1s steps(20) infinite alternate;
+    -webkit-animation: pulsate 1s steps(20) infinite alternate;
+    cursor: auto;
+    border: 2px solid black;
+}
+
+@-webkit-keyframes pulsate {
+    from { border: 1px solid white; }
+    to { border: 5px solid #63b6ff; }
+}
+
+@keyframes pulsate {
+    from { border: 2px solid black; }
+    to { border: 5px solid #289aff; }
+}

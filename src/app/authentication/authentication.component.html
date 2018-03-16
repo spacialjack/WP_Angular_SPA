@@ -1,0 +1,12 @@
+
+<div>
+  <form [formGroup]="loginForm" [hidden]="hideLogin()" (ngSubmit)="onSubmit(loginForm.value)" method="POST">
+    <input id="loginUserName" formControlName="username" placeholder="{{ nameLoginField }}">
+    <input id="loginPassword" formControlName="password" placeholder="{{ pssLoginField }}">
+    <button id="loginButton" class="btn btn-primary" type="submit" (click)="ngSubmit">Login</button>
+  </form>
+</div> 
+
+<div [hidden]="hideLogout()">
+  <button class="btn btn-danger" (click)="logOut()" >Logout</button>
+</div>
